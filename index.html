@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Form Validation</title>
+</head>
+<body>
+
+    <header> 
+        <h2>FORM VALIDATION USING REGULAR EXPRESSION IN JAVASCRIPT </h2>
+
+    </header>
+    <main>
+        <div class = "container">
+            <label for="fullName"> Full Name </label>
+            <input type="text" 
+            name="Full Name" 
+            id="Full Name" 
+            pattern="/[a-zA-Z]\s[a-zA-Z]$/gi"
+            placeholder="FirstName LastName" required />
+
+            <label for="username"> Username</label>
+            <input type="text"
+            name="username"
+            id="username"
+            pattern= "/[\w]{6,}$/gi"
+            placeholder="Enter your username here" required />
+
+            <label for="password"> Password</label>
+            <input type="text"
+            name="password"
+            id="password"
+            pattern="/^[\w]{8,}$/g"
+            placeholder="Enter your password here" required/>
+
+            
+            <div class="phone-input">
+            <label for="phone"> Phone</label>
+            <!-- we need a json file or a url link for countries short code and their respective call codes. The countries codes used here are temporary-->
+            <select name="code-select" id="code-select">
+                <option value="CAN-1">CAN-1</option>
+                <option value="NGR-234">NGR-234</option>
+                <option value="GER-49">GER-49</option>
+                <option value="EST-372">EST-372</option>
+            </select>
+            <input type="tel" name="phoneNumber" 
+            id="phoneNumber" 
+            pattern="/^[\d]{10}$/g"
+            placeholder="write your phone number here" required />
+        </div>
+
+            <!-- <button> Submit </button> -->
+            <input type="button" value="Submit"/>
+        </div>
+    </main>
+    
+</body>
+</html>
