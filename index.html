@@ -5,25 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Form Validation</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
 </head>
 <body>
 
-    <header> 
-        <h2>FORM VALIDATION USING REGULAR EXPRESSION IN JAVASCRIPT </h2>
-
-    </header>
     <main>
         <div class = "container">
-            <!-- title attribute to describe teh pattern to help the user-->
+            <div class ="text-box">
+                <p>FORM VALIDATION USING REGULAR EXPRESSION IN JAVASCRIPT </p>
+            </div>
+            
+            <!-- title attribute to describe the pattern to help the user-->
+            <div class="form-box">
             <div class ="input-name">
                 <label for="fullName"> Full Name </label>
                 <input type="text" 
                 name="Full Name" 
                 id="full-name" 
                 pattern="([a-zA-Z])(\s)([a-zA-Z])$/g" title="Must contain only letters"
-                placeholder="FirstName LastName" required >
+                placeholder="FirstName      LastName" required >
 
-                <p class="input-name-error"> Incorrect Full Name Input Format! </p>
+                <p class="name-error"> Incorrect Full Name Input Format! </p>
             </div>
 
             <div class ="input-email">
@@ -61,7 +63,7 @@
             </div>
 
 
-            <div class="phone-input">
+            <div class="input-phone">
             <label for="phone"> Phone</label>
             <!-- we need a json file or a url link for countries short code and their respective call codes. The countries codes used here are temporary-->
             <select name="code-select" id="code-select">
@@ -73,7 +75,7 @@
             <input type="tel" name="phoneNumber" 
             id="phone-number" 
             pattern="(^[\d]){10}$" title="Must contain 10 numbers matched with your country code"
-            placeholder="write your phone number here" required />
+            placeholder="Write your phone number here" required />
 
             <p class="number-error"> Incorrect Phone Number Input Format! </p>
         </div>
@@ -83,16 +85,22 @@
             <input type="text" 
             name="fav-website" 
             id="fav-website" 
-            pattern= "(https://)(www)\.[\w_+-]+\.(\w){2,}$" title="Must be in the format: https://www.character.domain"
+            title="Must be in the format: https://www.character.domain"
             placeholder="https://www.myfavorite-website.domain" required >
 
-            <p class="input-website-error"> Incorrect Website Input Format! </p>
+            <p class="website-error"> Incorrect Website Input Format! </p>
         </div>
 
             <!-- <button> Submit </button> -->
-            <input type="button" value="Submit"/>
+            <input class ="btn-submit" type="button" value="Submit"/>
+
+        </div>
+
         </div>
     </main>
+
+
+    <script src="/index.js"></script>
     
 </body>
 </html>
