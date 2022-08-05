@@ -68,10 +68,57 @@ body{
     padding-top: 50px;
     padding-bottom: 0px;
 }
+#name-error{
+    display:none;
+    margin-top: 0;
+    color: red;
+    font-weight: 500;
+    /* margin-left: 50px; */
+    /* margin-bottom: 10px ; */
+    font-style: italic;
+}
 
 
+#website-error{
+    display:none;
+    margin-top: 0;
+    color: red;
+    font-weight: 500;
+    /* margin-left: 50px; */
+    /* margin-bottom: 10px ; */
+    font-style: italic;
+}
+#number-error{
+    display:none;
+    margin-top: 0;
+    color: red;
+    font-weight: 500;
+    /* margin-left: 50px; */
+    /* margin-bottom: 10px ; */
+    font-style: italic;
+}
 
-.name-error,.user-name-error,.email-error,.password-error,.number-error,.website-error{
+#password-error{
+    display:none;
+    margin-top: 0;
+    color: red;
+    font-weight: 500;
+    /* margin-left: 50px; */
+    /* margin-bottom: 10px ; */
+    font-style: italic;
+}
+
+#email-error{
+    display:none;
+    margin-top: 0;
+    color: red;
+    font-weight: 500;
+    /* margin-left: 50px; */
+    /* margin-bottom: 10px ; */
+    font-style: italic;
+}
+
+#user-name-error{
     display:none;
     margin-top: 0;
     color: red;

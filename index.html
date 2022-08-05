@@ -22,10 +22,10 @@
                 <input type="text" 
                 name="Full Name" 
                 id="full-name" 
-                pattern="([a-zA-Z])(\s)([a-zA-Z])$/g" title="Must contain only letters"
+                pattern="[a-zA-Z]+[\s][a-zA-Z]+$" title="Must contain only letters"
                 placeholder="FirstName      LastName" required >
 
-                <p class="name-error"> Incorrect Full Name Input Format! </p>
+                <p id="name-error"> Incorrect Full Name Input Format! </p>
             </div>
 
             <div class ="input-email">
@@ -36,7 +36,7 @@
                 pattern="[\w._+-]+@[\w.-]+\.[a-z]{2,}$" title="Must be in the format: character@character.domain"
                 placeholder="Enter your email here" required >
 
-                <p class="email-error"> Incorrect Email Input Format! </p>
+                <p id="email-error"> Incorrect Email Input Format! </p>
             </div>
 
             <div class="input-username">
@@ -44,10 +44,10 @@
                 <input type="text"
                 name="username"
                 id="user-name"
-                pattern= "(^[\w]){6,10}$" title="Must contain six or more characters"
+                pattern= "^[\w]{6,10}$" title="Must contain six or more characters"
                 placeholder="Enter your username here" required />
 
-                <p class="user-name-error"> Incorrect Username Input Format! </p>
+                <p id="user-name-error"> Incorrect Username Input Format! </p>
             </div>
 
             <div class ="input-password">
@@ -55,10 +55,10 @@
             <input type="text"
             name="password"
             id="password"
-            pattern= "(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{7,}" title="Must contain at least 7 characters which consist of at least one uppercase, lowercase and number"
+            pattern= "(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{7,12}$" title="Must contain at least 7 characters which consist of at least one uppercase, lowercase and number"
             placeholder="Enter your password here" required >
 
-            <p class="password-error"> Incorrect Password Input Format! </p>
+            <p id="password-error"> Incorrect Password Input Format! </p>
 
             </div>
 
@@ -67,17 +67,17 @@
             <label for="phone"> Phone</label>
             <!-- we need a json file or a url link for countries short code and their respective call codes. The countries codes used here are temporary-->
             <select name="code-select" id="code-select">
-                <option value="CAN-1">CAN-1</option>
                 <option value="NGR-234">NGR-234</option>
+                <option value="CAN-1">CAN-1</option>
                 <option value="GER-49">GER-49</option>
                 <option value="EST-372">EST-372</option>
             </select>
             <input type="tel" name="phoneNumber" 
             id="phone-number" 
-            pattern="(^[\d]){10}$" title="Must contain 10 numbers matched with your country code"
+            pattern="^[\d]{10}$" title="Must contain 10 numbers matched with your country code"
             placeholder="Write your phone number here" required />
 
-            <p class="number-error"> Incorrect Phone Number Input Format! </p>
+            <p id="number-error"> Incorrect Phone Number Input Format! </p>
         </div>
 
         <div class ="input-website">
@@ -88,11 +88,11 @@
             title="Must be in the format: https://www.character.domain"
             placeholder="https://www.myfavorite-website.domain" required >
 
-            <p class="website-error"> Incorrect Website Input Format! </p>
+            <p id="website-error"> Incorrect Website Input Format! </p>
         </div>
 
             <!-- <button> Submit </button> -->
-            <input class ="btn-submit" type="button" value="Submit"/>
+            <input id ="btn-submit" type="button" value="Submit"/>
 
         </div>
 
