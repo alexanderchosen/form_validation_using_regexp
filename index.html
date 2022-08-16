@@ -12,7 +12,7 @@
     <main>
         <div class = "container">
             <div class ="text-box">
-                <p>FORM VALIDATION USING REGULAR EXPRESSION IN JAVASCRIPT </p>
+                <p>FORM VALIDATION USING REGULAR EXPRESSION & PATTERN ATTRIBUTE </p>
             </div>
             
             <!-- title attribute to describe the pattern to help the user-->
@@ -44,7 +44,7 @@
                 <input type="text"
                 name="username"
                 id="user-name"
-                pattern= "^[\w]{6,10}$" title="Must contain six or more characters"
+                pattern= "^[\w]{6,10}$" title="Must contain 6-10 characters"
                 placeholder="Enter your username here" required />
 
                 <p id="user-name-error"> Incorrect Username Input Format! </p>
@@ -55,7 +55,7 @@
             <input type="text"
             name="password"
             id="password"
-            pattern= "(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{7,12}$" title="Must contain at least 7 characters which consist of at least one uppercase, lowercase and number"
+            pattern= "(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{7,12}$" title="Must contain 7-12 characters which consist of at least one uppercase, lowercase and number"
             placeholder="Enter your password here" required >
 
             <p id="password-error"> Incorrect Password Input Format! </p>
@@ -67,21 +67,21 @@
             <label for="phone"> Phone</label>
             <!-- we need a json file or a url link for countries short code and their respective call codes. The countries codes used here are temporary-->
             <select name="code-select" id="code-select">
-                <option value="NGR-234">NGR-234</option>
+                <option value="NG-234">NG-234</option>
                 <option value="CAN-1">CAN-1</option>
                 <option value="GER-49">GER-49</option>
-                <option value="EST-372">EST-372</option>
+                <option value="ES-372">ES-372</option>
             </select>
             <input type="tel" name="phoneNumber" 
             id="phone-number" 
             pattern="^[\d]{10}$" title="Must contain 10 numbers matched with your country code"
-            placeholder="Write your phone number here" required />
+            placeholder="Write your phone number" required />
 
             <p id="number-error"> Incorrect Phone Number Input Format! </p>
         </div>
 
         <div class ="input-website">
-            <label for="fav-website"> Favorite Website </label>
+            <label for="fav-website"> Website </label>
             <input type="text" 
             name="fav-website" 
             id="fav-website" 
@@ -93,8 +93,6 @@
 
             <!-- <button> Submit </button> -->
             <input id ="btn-submit" type="button" value="Submit"/>
-
-        </div>
 
         </div>
     </main>

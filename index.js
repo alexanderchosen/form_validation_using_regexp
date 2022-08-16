@@ -1,7 +1,7 @@
 let fullName = document.getElementById('full-name');
 let username = document.getElementById('user-name');
 let password = document.getElementById('password');
-let phoneNumber = document.getElementById('phone-number');
+let phoneNumber = document.getElementById('phone-number')
 let email = document.getElementById('email');
 let favWebsite = document.getElementById('fav-website')
  
@@ -17,8 +17,10 @@ fullName.addEventListener('input', function(e){
     let fullNamePattern = fullName.getAttribute('pattern')
     let namePattern = new RegExp (`${fullNamePattern}`,'gi')
     let fullNameValue = e.target.value
+    // fullName.value.length ===0 ? fullNameError.style.display = 'none': fullNameError.style.display = 'block'
+    console.log(fullNameValue)
     let fullNameResult = namePattern.test(fullNameValue)
-    
+    console.log(fullNameResult)
     if(fullNameResult){
         fullNameError.style.display = 'none'
     }
@@ -27,21 +29,31 @@ fullName.addEventListener('input', function(e){
     }
 })
 
+// fullName.addEventListener('keypress', function(e){
+//     let keycode = e.keycode
+//     if(keycode ===8 || fullName.value.length ===0){
+//         fullNameError.style.display = 'none'
+//     }
+//     else{
+//         fullNameError.style.display = 'block'
+//     }
+// })
+
 
 email.addEventListener('input', function(e){
     let emailPattern = email.getAttribute('pattern')
     let mailPattern = new RegExp (`${emailPattern}`,'gi')
     console.log(mailPattern)
     let emailValue = e.target.value
+    // email.value.length ==0 ? emailError.style.display = 'none': emailError.style.display = 'block'
     console.log(emailValue)
     let emailResult = mailPattern.test(emailValue)
     console.log(emailResult)
-    
     if(emailResult){
-        fullNameError.style.display = 'none'
+        emailError.style.display = 'none'
     }
     else{
-        fullNameError.style.display = 'block'
+        emailError.style.display = 'block'
     }
 })
 
@@ -50,7 +62,9 @@ username.addEventListener('input', function(e){
     let usernamePattern = username.getAttribute('pattern')
     let pattern = new RegExp (`${usernamePattern}`,'g')
     let usernameValue = e.target.value
+    console.log(usernameValue)
     let usernameResult = pattern.test(usernameValue)
+    console.log(usernameResult)
     if(usernameResult){
         usernameError.style.display = 'none'
     }
@@ -89,11 +103,43 @@ phoneNumber.addEventListener('input', function(e){
     // add functionality to turn password inputs to *
     if(numberResult){
         numberError.style.display = 'none'
+        // window.getComputedStyle('numberError').display = 'none'
     }
     else{
         numberError.style.display = 'block'
     }
 })
+
+// class InputFunction {
+//     constructor(inputTag){
+//         this.inputTag = inputTag;
+//     }
+//     getInputs = (inputTag) =>{
+//         return document.getElementById(${inputTag}).addEventListener('change',  function(e){
+//             console.log(`${inputTag}`)
+//             let pattern = inputTag.getAttribute('pattern')
+//             let newPattern = new RegExp (`${pattern}`,'g')
+//             console.log(newPattern)
+//             let value = e.target.value
+//             console.log(value)
+//             let result = newPattern.test(value)
+//             console.log(result)
+//             if(result){
+//                  document.inputTag.p.style.display = 'none'
+//             }
+//             else{
+//                 document.inputTag.p.style.display ='block'
+//             }
+            
+//         })
+       
+    
+//     }
+    
+// }
+
+// let phone = new InputFunction('phone-number')
+// console.log (phone.getInputs())
 
 
 
@@ -101,7 +147,9 @@ favWebsite.addEventListener('input', function(e){
     // let webPattern = new RegExp ('^(http(s?):)\/\/(www)\.[\w]+\.[\w]{2,}$' , 'i')
     let webPattern = /^(https:|http:)\/\/(www)\.[\w]+\.[\w]{2,}$/i
     let websiteValue = e.target.value
+    console.log(websiteValue)
     let webSuccess = webPattern.test(websiteValue)
+    console.log(webSuccess)
      if (webSuccess){
         websiteError.style.display='none'
      }
